@@ -1,20 +1,23 @@
 import clsx from "clsx";
-import styles from "./restaurant-card.module.scss";
 import Rating from "@/components/Rating";
 import { Vendor } from "@/api/vendors-list/types";
 import { toFa } from "@/utils/number";
 
+import styles from "./restaurant-card.module.scss";
+
 interface Props {
   data: Vendor;
+  style?: React.CSSProperties;
 }
 
-const RestaurantCard: React.FC<Props> = ({ data }) => {
+const RestaurantCard: React.FC<Props> = ({ data, style }) => {
   return (
     <div
       className={clsx(
         "d-flex flex-column w-100 shadow-main",
         styles.RestaurantCard
       )}
+      style={style}
     >
       <header
         className={clsx("d-flex flex-column", styles.RestaurantCard__header)}
