@@ -1,4 +1,8 @@
-declare module "*.scss" {
-  const content: Record<string, string>;
-  export default content;
-}
+type PaginatedRequest = {
+  page: number;
+  page_size: number;
+};
+
+type PaginatedResponse = {
+  count: number;
+};
