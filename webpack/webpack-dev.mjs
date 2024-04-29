@@ -2,9 +2,11 @@ import path from "path";
 
 import { css, typescript, babel, devServer } from "./modules/index.mjs";
 import { html } from "./plugins/index.mjs";
+import { calculateRules } from "./utils/rules.mjs";
 
 const __dirname = path.resolve();
 
+/** @type { import('webpack').Configuration } */
 export default {
   mode: "development",
   context: __dirname,
@@ -16,7 +18,7 @@ export default {
   },
   devServer,
   module: {
-    rules: [babel, typescript, css],
+    rules: calculateRules([babel, typescript, css]),
   },
   plugins: [html],
   resolve: {
