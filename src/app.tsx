@@ -1,11 +1,20 @@
-import clsx from "clsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./pages/homepage";
+import RestaurantsPage from "./pages/restaurants";
 
-import styles from "./app.module.scss";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/restaurants",
+    element: <RestaurantsPage />,
+  },
+]);
 
 const App = () => {
-  return (
-    <div className={clsx(styles.App, "shadow-main")}>Snappfood Home Page</div>
-  );
+  return <RouterProvider router={router} />;
 };
 
 export default App;
