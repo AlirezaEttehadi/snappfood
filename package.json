@@ -1,0 +1,11 @@
+{
+  "name": "snappfood",
+  "version": "1.0.0",
+  "description": "The challenge for the front-end team of the snappfood company.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alireza Ettehadi",
+  "license": "ISC"
+}
